@@ -9,7 +9,7 @@ def get_weather(city: str) -> str:
     """Fetches weather for a given city."""
     try:
         endpoint = "https://wttr.in"
-        response = requests.get(f"{endpoint}/{city}", params={"format": "j1"})  # JSON format
+        response = requests.get(f"{endpoint}/{city}", params={"format": "j1"})  
         response.raise_for_status()
         return response.text
     except requests.RequestException as e:
